@@ -1,8 +1,3 @@
-**✅ File created: `guide_to_use_ollama.md`**
-
-Here's the content for the guide:
-
-```markdown
 # Guide to Using Ollama
 
 A practical guide for running Ollama locally, accessing it over the network, using Cloud models, and integrating via API.
