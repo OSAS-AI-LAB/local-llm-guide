@@ -2,55 +2,22 @@
 
 **A comprehensive guide and template collection for running local LLMs.**
 
-Covers **llama.cpp**, **vLLM**, **Ollama**, and more — from quick local setup to production serving.
+## 📖 Introduction
+This repository provides practical, copy-pasteable guides for deploying Large Language Models locally. Whether you are prototyping on a laptop, running edge deployments, or serving high-concurrency production workloads, you'll find the right tools, configurations, and best practices here.
 
----
+## 📚 Full Guide
 
-## 🚀 Quick Start
-
-```bash
-# Ollama (easiest)
-curl -fsSL https://ollama.com/install.sh | sh
-ollama pull qwen2.5:7b
-ollama run qwen2.5:7b
-```
-
-```bash
-# llama.cpp (high performance)
-git clone https://github.com/ggerganov/llama.cpp
-cd llama.cpp && make LLAMA_CUDA=1
-./llama-server -m models/llama-3.1-8b.Q5_K_M.gguf --port 8080
-```
-
-See `docs/` for detailed guides.
-
----
+| Tool | Best For | Hardware Focus | Model Format |
+| :--- | :--- | :--- | :--- |
+| **[Ollama](docs/ollama.md)** | Local Dev / Prototyping | Apple Silicon / Consumer GPU | GGUF |
+| **[llama.cpp](docs/llama-cpp.md)** | Edge / CPU / Custom Apps | CPU / Any GPU | GGUF |
+| **[vLLM](docs/vllm.md)** | Production / High Scale | NVIDIA Multi-GPU | HuggingFace |
 
 ## ✨ What's Inside
+- **Step-by-step setups:** From zero to running your first chat or API endpoint.
+- **Hardware cheat sheets:** VRAM calculations and quantization guides (Q4, Q8, FP16).
+- **API integration:** Examples for OpenAI-compatible endpoints and Python/JS clients.
+- **Performance tuning:** Context window management, batching, and memory optimization.
 
-- **Setup guides**: Ollama, llama.cpp, vLLM
-- **Hardware recommendations** & quantization
-- **Templates**: Docker, systemd, API servers, Modelfiles
-- **Advanced**: RAG, function calling, multi-GPU, Open WebUI
-- **Scripts**: Hardware detection, benchmarks, deployment helpers
-
----
-
-## 📁 Structure
-
-- `docs/` — Full documentation (setup, tools, best practices)
-- `templates/` — Ready-to-use configs and scripts
-- `scripts/` — Automation helpers
-
----
-
-## 📖 Next Steps
-
-Explore the [`docs/`](docs/) folder for in-depth guides.
-
-**Star the repo** if this helps you run local models! 
-
-Contributions welcome — PRs for new tools, hardware reports, or templates.
-```
-
-This is intentionally short and to-the-point, with the bulk of content in `docs/` as requested. It highlights the main tools you mentioned. You can copy-paste directly into `README.md`.
+## 🤝 Contributing
+Contributions are welcome! Please open an issue or submit a pull request if you'd like to improve these guides, add new inference engines, or fix typos.
